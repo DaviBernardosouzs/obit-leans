@@ -1,0 +1,72 @@
+@keyframes atmosphere-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes draw-orbit {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes target-pulse {
+  0% { opacity: 0.72; transform: scale(0.65); }
+  70%, 100% { opacity: 0; transform: scale(1.65); }
+}
+
+@keyframes earth-rotation {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes cloud-rotation {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes planet-scan {
+  from { transform: translateY(-115%); opacity: 0; }
+  12%, 78% { opacity: .7; }
+  to { transform: translateY(115%); opacity: 0; }
+}
+
+@keyframes signal-breathe {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+
+@keyframes scan-reveal {
+  0% { opacity: 0.9; transform: translateY(-100%); }
+  75% { opacity: 0.28; }
+  100% { opacity: 0; transform: translateY(100%); }
+}
+
+@keyframes orbit-tracker {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
+}
+
+@keyframes opening-sequence {
+  0% { opacity: 0; }
+  16%, 72% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes opening-identity {
+  0% { opacity: 0; transform: scale(.96) translateY(7px); }
+  24%, 72% { opacity: 1; transform: scale(1) translateY(0); }
+  100% { opacity: 0; transform: scale(1.015) translateY(-3px); }
+}
+
+@keyframes opening-orbit {
+  from { transform: translate(-50%, -50%) rotate(-17deg) scaleX(.15); opacity: 0; }
+  to { transform: translate(-50%, -50%) rotate(-17deg) scaleX(1); opacity: .8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
